@@ -471,7 +471,7 @@
   // #define USE_CCLOADER                           // Enable CCLoader FW upgrade tool (for CC25xx devices)
 
 // -- mDNS ----------------------------------------
-//#define USE_DISCOVERY                            // Enable mDNS for the following services (+8k code or +23.5k code with core 2_5_x, +0.3k mem)
+  #define USE_DISCOVERY                          // Enable mDNS for the following services (+8k code or +23.5k code with core 2_5_x, +0.3k mem)
   #define WEBSERVER_ADVERTISE                    // Provide access to webserver by name <Hostname>.local/
   #define MQTT_HOST_DISCOVERY                    // Find MQTT host server (overrides MQTT_HOST if found)
 
@@ -492,7 +492,7 @@
 #define USE_RULES                                // Add support for rules (+8k code)
 //  #define USE_EXPRESSION                         // Add support for expression evaluation in rules (+3k2 code, +64 bytes mem)
 //    #define SUPPORT_IF_STATEMENT                 // Add support for IF statement in rules (+4k2 code, -332 bytes mem)
-#define USER_RULE1 "on Time#Minute do DisplayText [c1l1f0s1T] [c15l1f0s1t]          %[x0y10h296x250y5t] endon on tele-BMP280#Temperature do DisplayText [c1l2f0s2]  %value% C endon on tele-AM2301#Humidity do DisplayText [c1l3f0s2]  %value% % endon on tele-BMP280#Pressure do DisplayText [c1l4f0s2] %value% hPa endon"          // Add rule1 data saved at initial firmware load or when command reset is executed
+#define USER_RULE1 "on Time#Minute do DisplayText [c1l1f0s1T] [c15l1f0s1t]          %[x0y10h296x250y5t] endon on tele-AM2301#Temperature do DisplayText [c1l2f0s2]  %value% C endon on tele-AM2301#Humidity do DisplayText [c1l3f0s2]  %value% % endon on tele-BMP280#Pressure do DisplayText [c1l4f0s2] %value% hPa endon"          // Add rule1 data saved at initial firmware load or when command reset is executed
 //  #define USER_RULE2 "<Any rule2 data>"          // Add rule2 data saved at initial firmware load or when command reset is executed
 //  #define USER_RULE3 "<Any rule3 data>"          // Add rule3 data saved at initial firmware load or when command reset is executed
 
